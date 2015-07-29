@@ -59,7 +59,7 @@
 <br>
 <br>
 <div class="alert alert-success" role="alert">
-    Clique no botão <b>ver lista</b> ou aperte a tecla <b>F5</b> para aparecer a modal com as informações!
+    Clique no botão <b>ver lista</b> ou aperte a tecla <b>F7</b> para aparecer a janela com as informações!
 </div>
 </body>
 	<script src="public/jquery/jquery-1.11.3.min.js"></script>
