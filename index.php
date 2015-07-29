@@ -40,23 +40,11 @@
       </div>
       <div class="modal-body">
         <code>Clique na lista que deja selecionar as informações:</code><br>
-        	<div class='bs-callout ' id='bs-callout-danger'>
-                    <div class='row'>
-                        <div class='col-lg-12'>
-                        	<b>Categoria:</b><br>
-                        	<div class="opcao">A</div>
-                        </div>
-                    </div>
+        	<div class='bs-callout' id='bs-callout-danger' style="cursor: pointer;" onmouseover="javascript:this.style.backgroundColor='#A9C3F9'" onmouseout="javascript:this.style.backgroundColor=''">
+            A
             </div>
-            <div class='bs-callout ' id='bs-callout-danger'>
-                    <div class='row'>
-                        <div class='col-lg-12'>
-                        	<b>Categoria:</b><br>
-                        	<div class="opcao">
-                        		B
-                        	</div>
-                        </div>
-                    </div>
+            <div class='bs-callout' id='bs-callout-danger' style="cursor: pointer;" onmouseover="javascript:this.style.backgroundColor='#A9C3F9'" onmouseout="javascript:this.style.backgroundColor=''">
+            B
             </div>
       </div>
       <div class="modal-footer">
@@ -69,7 +57,7 @@
 	<script src="public/jquery/jquery-1.11.3.min.js"></script>
 	<script src="public/bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript">
-		$('.opcao').click(function(){
+		$('.bs-callout').click(function(){
 			$('#input_resultado').val(
 				$(this).text());
 		});
