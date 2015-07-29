@@ -4,15 +4,30 @@
 	<link rel="stylesheet" href="public/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="public/bootstrap/css/bootstrap-theme.min.css">
 </head>
+<style>
+#bs-callout-danger {
+  border-left-color: #3364A5;
+}
+.bs-callout {
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 3px;
+}
+.menor{
+    font-size: 11px;
+}
+</style>
 <body>
 	<center>
-		<textarea name="input_resultado"></textarea>
+		<textarea id="input_resultado"></textarea>
 	</center>
 	<p></p>
 	<p></p>
 	<p></p>
 	<p></p>
-	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
   		Ver lista
 	</button>
 <!-- Modal -->
@@ -24,12 +39,25 @@
         <h4 class="modal-title" id="myModalLabel">Lista</h4>
       </div>
       <div class="modal-body">
-        <code>Clique na lista que deja seleciona:</code><br>
-        <div class="opcao">Categoria:A</div>
-        <div class="opcao">Categoria:B</div>
-        <div class="opcao">Categoria:C</div>
-        <div class="opcao">Categoria:D</div>
-        <div class="opcao">Categoria:E</div>
+        <code>Clique na lista que deja selecionar as informações:</code><br>
+        	<div class='bs-callout ' id='bs-callout-danger'>
+                    <div class='row'>
+                        <div class='col-lg-12'>
+                        	<b>Categoria:</b><br>
+                        	<div class="opcao">A</div>
+                        </div>
+                    </div>
+            </div>
+            <div class='bs-callout ' id='bs-callout-danger'>
+                    <div class='row'>
+                        <div class='col-lg-12'>
+                        	<b>Categoria:</b><br>
+                        	<div class="opcao">
+                        		B
+                        	</div>
+                        </div>
+                    </div>
+            </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Sair</button>
@@ -40,7 +68,7 @@
 </body>
 	<script src="public/jquery/jquery-1.11.3.min.js"></script>
 	<script src="public/bootstrap/js/bootstrap.min.js"></script>
-		<script type="text/javascript">
+	<script type="text/javascript">
 		$('.opcao').click(function(){
 			$('#input_resultado').val(
 				$(this).text());
